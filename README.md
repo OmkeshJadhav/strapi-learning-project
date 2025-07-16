@@ -1,5 +1,42 @@
 # 🚀 Getting started with Strapi
 
+### `Add Your Keys to .env`
+- Create .env file in the root directory
+- Add the following keys to the .env file
+
+```
+APP_KEYS="toBeModified1,toBeModified2"
+API_TOKEN_SALT=tobemodified
+ADMIN_JWT_SECRET=tobemodified
+TRANSFER_TOKEN_SALT=tobemodified
+JWT_SECRET=tobemodified
+ENCRYPTION_KEY=tobemodified
+```
+- To generate keys, you can use the following command in terminal:
+
+```
+For APP_KEYS: 
+node -e "console.log(Array(4).fill().map(()=>require('crypto').randomBytes(16).toString('base64')).join(','))"
+
+For API_TOKEN_SALT: 
+node -e "console.log(require('crypto').randomBytes(16).toString('base64'))"
+
+For ADMIN_JWT_SECRET: 
+node -e "console.log(require('crypto').randomBytes(16).toString('base64'))"
+
+For TRANSFER_TOKEN_SALT: 
+node -e "console.log(require('crypto').randomBytes(16).toString('base64'))"
+
+For JWT_SECRET: 
+node -e "console.log(require('crypto').randomBytes(16).toString('base64'))"
+
+For ENCRYPTION_KEY: 
+node -e "console.log(require('crypto').randomBytes(16).toString('base64'))"
+```
+
+Replace the placeholder text with the actual values generated from the commands.
+
+
 Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/dev-docs/cli) (CLI) which lets you scaffold and manage your project in seconds.
 
 ### `develop`
