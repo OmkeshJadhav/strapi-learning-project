@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_blocks_section_headers",
+  "info": {
+    "displayName": "Section Header",
+    "icon": "expand"
+  },
+  "options": {},
+  "attributes": {
+    "smallHeading": {
+      "type": "string"
+    },
+    "largeHeading": {
+      "type": "string"
+    },
+    "anchorLink": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

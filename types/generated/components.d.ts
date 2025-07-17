@@ -1,5 +1,16 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface BlocksCardGrid extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_card_grids';
+  info: {
+    displayName: 'Card Grid';
+    icon: 'dashboard';
+  };
+  attributes: {
+    cards: Schema.Attribute.Component<'shared.card', true>;
+  };
+}
+
 export interface BlocksHero extends Struct.ComponentSchema {
   collectionName: 'components_blocks_heroes';
   info: {
@@ -11,6 +22,19 @@ export interface BlocksHero extends Struct.ComponentSchema {
     Heading: Schema.Attribute.String;
     Image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     Links: Schema.Attribute.Component<'shared.link', true>;
+  };
+}
+
+export interface BlocksSectionHeader extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_section_headers';
+  info: {
+    displayName: 'Section Header';
+    icon: 'expand';
+  };
+  attributes: {
+    anchorLink: Schema.Attribute.String;
+    largeHeading: Schema.Attribute.String;
+    smallHeading: Schema.Attribute.String;
   };
 }
 
@@ -52,6 +76,19 @@ export interface LayoutHeader extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedCard extends Struct.ComponentSchema {
+  collectionName: 'components_shared_cards';
+  info: {
+    displayName: 'Card';
+    icon: 'file';
+  };
+  attributes: {
+    cardDescription: Schema.Attribute.String;
+    cardHeader: Schema.Attribute.String;
+    cardImage: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+  };
+}
+
 export interface SharedLink extends Struct.ComponentSchema {
   collectionName: 'components_shared_links';
   info: {
@@ -82,10 +119,13 @@ export interface SharedLogoLink extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'blocks.card-grid': BlocksCardGrid;
       'blocks.hero': BlocksHero;
+      'blocks.section-header': BlocksSectionHeader;
       'layout.banner': LayoutBanner;
       'layout.footer': LayoutFooter;
       'layout.header': LayoutHeader;
+      'shared.card': SharedCard;
       'shared.link': SharedLink;
       'shared.logo-link': SharedLogoLink;
     }
