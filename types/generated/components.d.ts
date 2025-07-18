@@ -11,6 +11,20 @@ export interface BlocksCardGrid extends Struct.ComponentSchema {
   };
 }
 
+export interface BlocksCardWithContent extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_card_with_contents';
+  info: {
+    displayName: 'Card With Content';
+    icon: 'chartBubble';
+  };
+  attributes: {
+    description: Schema.Attribute.RichText;
+    heading: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    link: Schema.Attribute.Component<'shared.link', false>;
+  };
+}
+
 export interface BlocksHero extends Struct.ComponentSchema {
   collectionName: 'components_blocks_heroes';
   info: {
@@ -120,6 +134,7 @@ declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'blocks.card-grid': BlocksCardGrid;
+      'blocks.card-with-content': BlocksCardWithContent;
       'blocks.hero': BlocksHero;
       'blocks.section-header': BlocksSectionHeader;
       'layout.banner': LayoutBanner;

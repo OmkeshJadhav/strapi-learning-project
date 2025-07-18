@@ -26,7 +26,15 @@ const landingPageBuiltQuery = {
               }
             }
           }
-        }
+        },
+        "blocks.card-with-content":{
+          populate: {
+            link: true,
+            image: {
+              fields: ["url", "alternativeText"]
+            },
+          }
+        },
       }
     },
   }

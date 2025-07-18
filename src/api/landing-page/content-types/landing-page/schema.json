@@ -22,7 +22,8 @@
       "components": [
         "blocks.hero",
         "blocks.section-header",
-        "blocks.card-grid"
+        "blocks.card-grid",
+        "blocks.card-with-content"
       ]
     }
   }

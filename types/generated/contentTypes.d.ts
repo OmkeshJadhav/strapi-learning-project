@@ -454,7 +454,12 @@ export interface ApiLandingPageLandingPage extends Struct.SingleTypeSchema {
   };
   attributes: {
     blocks: Schema.Attribute.DynamicZone<
-      ['blocks.hero', 'blocks.section-header', 'blocks.card-grid']
+      [
+        'blocks.hero',
+        'blocks.section-header',
+        'blocks.card-grid',
+        'blocks.card-with-content',
+      ]
     >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
