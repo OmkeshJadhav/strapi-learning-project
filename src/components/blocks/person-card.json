@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_blocks_person_cards",
+  "info": {
+    "displayName": "Person Card",
+    "icon": "alien"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "person_details": {
+      "type": "text"
+    },
+    "person_name": {
+      "type": "string"
+    },
+    "person_designation": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

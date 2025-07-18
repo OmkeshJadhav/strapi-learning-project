@@ -459,6 +459,8 @@ export interface ApiLandingPageLandingPage extends Struct.SingleTypeSchema {
         'blocks.section-header',
         'blocks.card-grid',
         'blocks.card-with-content',
+        'blocks.content-block',
+        'blocks.person-card',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;
