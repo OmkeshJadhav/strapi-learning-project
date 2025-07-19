@@ -36,6 +36,16 @@ export interface BlocksContentBlock extends Struct.ComponentSchema {
   };
 }
 
+export interface BlocksFaqs extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_faqs';
+  info: {
+    displayName: 'Faqs';
+  };
+  attributes: {
+    faq: Schema.Attribute.Component<'shared.card', true>;
+  };
+}
+
 export interface BlocksHero extends Struct.ComponentSchema {
   collectionName: 'components_blocks_heroes';
   info: {
@@ -47,6 +57,20 @@ export interface BlocksHero extends Struct.ComponentSchema {
     Heading: Schema.Attribute.String;
     Image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     Links: Schema.Attribute.Component<'shared.link', true>;
+  };
+}
+
+export interface BlocksNewsletter extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_newsletters';
+  info: {
+    displayName: 'Newsletter';
+  };
+  attributes: {
+    button: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+    form_id: Schema.Attribute.String;
+    heading: Schema.Attribute.String;
+    placeholder: Schema.Attribute.String;
   };
 }
 
@@ -161,7 +185,9 @@ declare module '@strapi/strapi' {
       'blocks.card-grid': BlocksCardGrid;
       'blocks.card-with-content': BlocksCardWithContent;
       'blocks.content-block': BlocksContentBlock;
+      'blocks.faqs': BlocksFaqs;
       'blocks.hero': BlocksHero;
+      'blocks.newsletter': BlocksNewsletter;
       'blocks.person-card': BlocksPersonCard;
       'blocks.section-header': BlocksSectionHeader;
       'layout.banner': LayoutBanner;

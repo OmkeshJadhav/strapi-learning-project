@@ -42,7 +42,13 @@ const landingPageBuiltQuery = {
               fields: ["url", "alternativeText"]
             },
           }
-        }
+        },
+        "blocks.faqs": {
+          populate: {
+            faq: true
+          }
+        },
+        "blocks.newsletter": true
       }
     },
   }
