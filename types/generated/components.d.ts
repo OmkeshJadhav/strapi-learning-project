@@ -139,6 +139,21 @@ export interface LayoutHeader extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedBlogContent extends Struct.ComponentSchema {
+  collectionName: 'components_shared_blog_contents';
+  info: {
+    displayName: 'Blog Content';
+    icon: 'cast';
+  };
+  attributes: {
+    blog_text: Schema.Attribute.RichText;
+    featured_image: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface SharedCard extends Struct.ComponentSchema {
   collectionName: 'components_shared_cards';
   info: {
@@ -193,6 +208,7 @@ declare module '@strapi/strapi' {
       'layout.banner': LayoutBanner;
       'layout.footer': LayoutFooter;
       'layout.header': LayoutHeader;
+      'shared.blog-content': SharedBlogContent;
       'shared.card': SharedCard;
       'shared.link': SharedLink;
       'shared.logo-link': SharedLogoLink;

@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_shared_blog_contents",
+  "info": {
+    "displayName": "Blog Content",
+    "icon": "cast"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "featured_image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "blog_text": {
+      "type": "richtext"
+    }
+  },
+  "config": {}
+}
