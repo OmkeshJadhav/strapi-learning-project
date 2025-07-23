@@ -13,25 +13,45 @@ TRANSFER_TOKEN_SALT=tobemodified
 JWT_SECRET=tobemodified
 ENCRYPTION_KEY=tobemodified
 ```
-- To generate keys, you can use the following command in terminal:
+
+- To generate keys, you can use the following commands in terminal:
+
+
+For APP_KEYS:
 
 ```
-For APP_KEYS: 
 node -e "console.log(Array(4).fill().map(()=>require('crypto').randomBytes(16).toString('base64')).join(','))"
+```
 
-For API_TOKEN_SALT: 
+For API_TOKEN_SALT:
+
+```
+
 node -e "console.log(require('crypto').randomBytes(16).toString('base64'))"
 
-For ADMIN_JWT_SECRET: 
-node -e "console.log(require('crypto').randomBytes(16).toString('base64'))"
+```
 
-For TRANSFER_TOKEN_SALT: 
-node -e "console.log(require('crypto').randomBytes(16).toString('base64'))"
+For ADMIN_JWT_SECRET:
 
-For JWT_SECRET: 
+```
 node -e "console.log(require('crypto').randomBytes(16).toString('base64'))"
+```
 
-For ENCRYPTION_KEY: 
+For TRANSFER_TOKEN_SALT:
+
+```
+node -e "console.log(require('crypto').randomBytes(16).toString('base64'))"
+```
+
+For JWT_SECRET:
+
+```
+node -e "console.log(require('crypto').randomBytes(16).toString('base64'))"
+```
+
+For ENCRYPTION_KEY:
+
+```
 node -e "console.log(require('crypto').randomBytes(16).toString('base64'))"
 ```
 
