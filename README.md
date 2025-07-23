@@ -3,6 +3,7 @@
 ### `Add Your Keys to .env`
 - Create .env file in the root directory
 - Add the following keys to the .env file
+- Add .env to .gitignore
 
 ```
 APP_KEYS="toBeModified1,toBeModified2"
